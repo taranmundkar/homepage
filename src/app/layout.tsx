@@ -1,12 +1,11 @@
-import React from 'react'
-import { Metadata } from 'next'
+import './globals.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'TTM Media - AI-Powered Real Estate Marketing',
-  description: 'Transform your real estate business with AI-driven lead generation and automated sales conversations.',
+export const metadata = {
+  title: 'TTM Media',
+  description: 'AI-Powered Real Estate Marketing',
 }
 
 export default function RootLayout({
