@@ -1,9 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/privacy',
+        destination: '/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/terms',
+        destination: '/terms-and-conditions',
+        permanent: true,
+      },
+      {
+        source: '/tos',
+        destination: '/terms-and-conditions',
+        permanent: true,
+      },
+    ]
   },
   async headers() {
     return [
