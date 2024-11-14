@@ -1,16 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   images: {
-    remotePatterns: [
+    domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'],
+  },
+  // Add this to resolve the metadataBase warning
+  async headers() {
+    return [
       {
-        protocol: 'https',
-        hostname: 'hebbkx1anhila5yf.public.blob.vercel-storage.com',
-        port: '',
-        pathname: '/**',
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+        ],
       },
-    ],
+    ]
   },
 }
 
-export default nextConfig;
+module.exports = nextConfig
