@@ -18,7 +18,7 @@ export default function HomePage() {
     <div className="bg-white">
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Main navigation">
-          <a href="/" className="flex items-center" aria-label="TTM Media home">
+          <Link href="/" className="flex items-center" aria-label="TTM Media home">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
               alt="TTM Media Robot Logo"
@@ -27,12 +27,12 @@ export default function HomePage() {
               className="h-12 w-auto"
             />
             <span className="ml-2 text-2xl font-bold text-blue-600">TTM Media</span>
-          </a>
+          </Link>
           <div className="hidden md:flex space-x-6">
-            <a href="#services" className="text-gray-800 hover:text-blue-600">Superpowers</a>
-            <a href="#how-it-works" className="text-gray-800 hover:text-blue-600">Magic Revealed</a>
-            <a href="#our-clients" className="text-gray-800 hover:text-blue-600">Success Stories</a>
-            <a href="#contact" className="text-gray-800 hover:text-blue-600">Join the A-Team</a>
+            <Link href="#services" className="text-gray-800 hover:text-blue-600">Superpowers</Link>
+            <Link href="#how-it-works" className="text-gray-800 hover:text-blue-600">Magic Revealed</Link>
+            <Link href="#our-clients" className="text-gray-800 hover:text-blue-600">Success Stories</Link>
+            <Link href="#contact" className="text-gray-800 hover:text-blue-600">Join the A-Team</Link>
           </div>
           <div className="flex space-x-4">
             <Link href="https://app.gohighlevel.com/?fp_ref=rev01" passHref>
@@ -247,10 +247,10 @@ export default function HomePage() {
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <h4 className="text-lg font-semibold mb-4">Superhero HQ</h4>
               <ul>
-                <li><a href="#services" className="hover:text-blue-400">Superpowers</a></li>
-                <li><a href="#how-it-works" className="hover:text-blue-400">Magic Revealed</a></li>
-                <li><a href="#our-clients" className="hover:text-blue-400">Success Stories</a></li>
-                <li><a href="#contact" className="hover:text-blue-400">Join the A-Team</a></li>
+                <li><Link href="#services" className="hover:text-blue-400">Superpowers</Link></li>
+                <li><Link href="#how-it-works" className="hover:text-blue-400">Magic Revealed</Link></li>
+                <li><Link href="#our-clients" className="hover:text-blue-400">Success Stories</Link></li>
+                <li><Link href="#contact" className="hover:text-blue-400">Join the A-Team</Link></li>
               </ul>
             </div>
             <div className="w-full md:w-1/3">
