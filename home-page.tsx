@@ -1,10 +1,11 @@
-"use client"
+'use client'
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, BarChart, Calendar, MessageCircle, Target, Users, Play } from 'lucide-react'
+import { Calendar, MessageCircle, Play, Zap } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
+import Link from 'next/link'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -16,8 +17,8 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="/" className="flex items-center">
+        <nav className="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Main navigation">
+          <a href="/" className="flex items-center" aria-label="TTM Media home">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
               alt="TTM Media Robot Logo"
@@ -28,14 +29,18 @@ export default function HomePage() {
             <span className="ml-2 text-2xl font-bold text-blue-600">TTM Media</span>
           </a>
           <div className="hidden md:flex space-x-6">
-            <a href="#services" className="text-gray-600 hover:text-blue-600">Services</a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-blue-600">How It Works</a>
-            <a href="#our-clients" className="text-gray-600 hover:text-blue-600">Our Clients</a>
-            <a href="#contact" className="text-gray-600 hover:text-blue-600">Contact</a>
+            <a href="#services" className="text-gray-800 hover:text-blue-600">Superpowers</a>
+            <a href="#how-it-works" className="text-gray-800 hover:text-blue-600">Magic Revealed</a>
+            <a href="#our-clients" className="text-gray-800 hover:text-blue-600">Success Stories</a>
+            <a href="#contact" className="text-gray-800 hover:text-blue-600">Join the A-Team</a>
           </div>
           <div className="flex space-x-4">
-            <Button variant="outline" className="bg-white text-blue-600 hover:bg-blue-50">Login</Button>
-            <Button className="bg-blue-600 text-white hover:bg-blue-700">Book Your Call</Button>
+            <Link href="https://app.gohighlevel.com/?fp_ref=rev01" passHref>
+              <Button variant="outline" className="bg-white text-blue-600 hover:bg-blue-50">LOGIN</Button>
+            </Link>
+            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
+              <Button className="bg-blue-600 text-white hover:bg-blue-700">Claim Your Superpower</Button>
+            </Link>
           </div>
         </nav>
       </header>
@@ -48,29 +53,31 @@ export default function HomePage() {
                 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
                 {...fadeInUp}
               >
-                Turn Leads into Closings Faster with Cutting-Edge AI Marketing Solutions
+                Unleash Your Inner Real Estate Superhero with AI Superpowers!
               </motion.h1>
               <motion.p 
-                className="text-xl text-gray-600 mb-8"
+                className="text-xl text-gray-800 mb-8"
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
               >
-                Boost your lead generation, automate sales conversations, and fill your calendar with qualified appointments.
+                Zap away cold calls, leap over lead generation hurdles, and close deals faster than a speeding bullet!
               </motion.p>
               <motion.div
                 {...fadeInUp}
                 transition={{ delay: 0.4 }}
               >
-                <Button className="bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-3">
-                  Book Your Free Strategy Call Now
-                </Button>
+                <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
+                  <Button className="bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-3">
+                    Activate Your AI Superpowers Now!
+                  </Button>
+                </Link>
               </motion.div>
               <motion.p
-                className="text-sm text-gray-500 mt-4"
+                className="text-sm text-gray-700 mt-4"
                 {...fadeInUp}
                 transition={{ delay: 0.6 }}
               >
-                Discover how to 10x your real estate business in just 60 minutes
+                Warning: May cause extreme success and uncontrollable laughter at your competition
               </motion.p>
             </div>
           </div>
@@ -78,23 +85,23 @@ export default function HomePage() {
 
         <section id="services" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Your AI Superpowers Await!</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  icon: <Target className="w-12 h-12 text-blue-600 mb-4" />,
-                  title: "AI-Powered Lead Generation",
-                  description: "Target and attract high-quality leads tailored to your real estate niche."
+                  icon: <Zap className="w-12 h-12 text-blue-600 mb-4" />,
+                  title: "Lead Generation Lightning",
+                  description: "Electrify your pipeline with high-voltage leads that'll make your sales meter go off the charts!"
                 },
                 {
                   icon: <MessageCircle className="w-12 h-12 text-blue-600 mb-4" />,
-                  title: "Automated Sales Conversations",
-                  description: "Engage leads 24/7 with AI-driven chat that nurtures and qualifies prospects."
+                  title: "24/7 Charm-o-Matic Chatbot",
+                  description: "Your tireless wingman that schmoozes leads while you snooze. It's like having a clone, but better!"
                 },
                 {
                   icon: <Calendar className="w-12 h-12 text-blue-600 mb-4" />,
-                  title: "Smart Appointment Booking",
-                  description: "Fill your calendar with qualified appointments, hands-free."
+                  title: "Time-Bending Calendar Filler",
+                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It's not time travel, it's TTM!"
                 }
               ].map((service, index) => (
                 <motion.div 
@@ -104,8 +111,8 @@ export default function HomePage() {
                   transition={{ delay: index * 0.2 }}
                 >
                   {service.icon}
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{service.title}</h3>
+                  <p className="text-gray-700">{service.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -114,13 +121,13 @@ export default function HomePage() {
 
         <section id="how-it-works" className="bg-gray-50 py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">How We Turn You Into a Real Estate Rockstar</h2>
             <div className="max-w-3xl mx-auto mb-16">
               {[
-                "We analyze your target market and create a custom AI-driven marketing strategy.",
-                "Our system generates and nurtures leads through multi-channel campaigns.",
-                "AI-powered chatbots engage with leads, qualifying them and scheduling appointments.",
-                "You receive a steady stream of qualified appointments, ready for you to close."
+                "We analyze your market faster than you can say 'sold above asking price'",
+                "Our AI minions work 24/7 to flood your pipeline with grade-A leads",
+                "Smart chatbots charm your leads, leaving them begging for a meeting with you",
+                "You swoop in like a real estate superhero, ready to close deals and take names"
               ].map((step, index) => (
                 <motion.div 
                   key={index}
@@ -131,7 +138,7 @@ export default function HomePage() {
                   <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4">
                     {index + 1}
                   </div>
-                  <p className="text-gray-600">{step}</p>
+                  <p className="text-gray-800">{step}</p>
                 </motion.div>
               ))}
             </div>
@@ -140,61 +147,66 @@ export default function HomePage() {
               {...fadeInUp}
               transition={{ delay: 0.6 }}
             >
-              <h3 className="text-2xl font-bold text-center mb-6">See Our Process in Action</h3>
-              <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden">
+              <h3 className="text-3xl font-bold text-center mb-8 text-blue-600">Witness the Magic in Action!</h3>
+              <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <Play className="w-16 h-16 text-blue-600" />
+                  <Play className="w-20 h-20 text-blue-600" />
                 </div>
                 <video
                   className="w-full h-full object-cover"
                   controls
-                  poster="/placeholder.svg?height=480&width=640"
+                  poster="/video-thumbnail.jpg"
                 >
-                  <source src="/path-to-your-video.mp4" type="video/mp4" />
+                  <source src="/ttm-media-process.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <p className="text-center mt-4 text-gray-600">
-                Watch this short video to see how TTM Media can transform your real estate marketing strategy.
+              <p className="text-center mt-6 text-lg text-gray-700 font-semibold">
+                Warning: This video contains scenes of extreme real estate success. Viewer discretion is advised.
               </p>
             </motion.div>
           </div>
         </section>
 
-        <section id="our-clients" className="py-20">
+        <section id="our-clients" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Clients</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">Real Estate Legends in the Making</h2>
+            <div className="grid md:grid-cols-2 gap-12">
               {[
                 {
-                  title: "Success Story: Sarah Johnson",
-                  description: "How Sarah increased her closings by 300% in 6 months"
+                  title: "Sarah 'The Closer' Johnson",
+                  description: "From stressed-out agent to unstoppable selling machine in 6 months flat!",
+                  achievement: "Closed 50 deals in 3 months"
                 },
                 {
-                  title: "Client Spotlight: Michael Chen",
-                  description: "Michael's journey to becoming a top-producing agent"
+                  title: "Michael 'The Lead Magnet' Chen",
+                  description: "How Michael went from cold calls to hot deals with the power of AI",
+                  achievement: "Generated 500+ qualified leads in 30 days"
                 }
               ].map((client, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg"
+                  className="bg-white p-8 rounded-lg shadow-xl"
                   {...fadeInUp}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <h3 className="text-xl font-semibold mb-2">{client.title}</h3>
-                  <p className="text-gray-600 mb-4">{client.description}</p>
-                  <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">{client.title}</h3>
+                  <p className="text-lg text-gray-700 mb-6">{client.description}</p>
+                  <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden mb-6">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Play className="w-12 h-12 text-blue-600" />
+                      <Play className="w-16 h-16 text-blue-600" />
                     </div>
                     <video
                       className="w-full h-full object-cover"
                       controls
-                      poster="/placeholder.svg?height=240&width=320"
+                      poster={`/client-thumbnail-${index + 1}.jpg`}
                     >
-                      <source src={`/path-to-client-video-${index + 1}.mp4`} type="video/mp4" />
+                      <source src={`/client-video-${index + 1}.mp4`} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
+                  </div>
+                  <div className="bg-blue-100 p-4 rounded-lg">
+                    <p className="text-xl font-semibold text-blue-600">{client.achievement}</p>
                   </div>
                 </motion.div>
               ))}
@@ -204,12 +216,14 @@ export default function HomePage() {
 
         <section id="contact" className="bg-blue-600 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Skyrocket Your Real Estate Success?</h2>
-            <p className="text-xl mb-8">Don't let another day pass with missed opportunities. Claim your free strategy call now!</p>
-            <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
-              Book Your Free Strategy Call
-            </Button>
-            <p className="text-sm mt-4">Limited slots available - Reserve yours before they're gone!</p>
+            <h2 className="text-4xl font-bold mb-6">Ready to Join the Real Estate Elite?</h2>
+            <p className="text-xl mb-8">Don't let another lead slip through your fingers! Grab your cape and let's make real estate history!</p>
+            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
+              <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+                Book Your Superhero Training Now!
+              </Button>
+            </Link>
+            <p className="text-lg mt-6 font-semibold">Hurry! Superpowers are going fast, and your competition is eyeing them!</p>
           </div>
         </section>
       </main>
@@ -228,25 +242,25 @@ export default function HomePage() {
                 />
                 <span className="text-2xl font-bold">TTM Media</span>
               </div>
-              <p>Empowering real estate agents with AI-driven marketing solutions.</p>
+              <p>Turning ordinary agents into extraordinary real estate superheroes!</p>
             </div>
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <h4 className="text-lg font-semibold mb-4">Superhero HQ</h4>
               <ul>
-                <li><a href="#services" className="hover:text-blue-400">Services</a></li>
-                <li><a href="#how-it-works" className="hover:text-blue-400">How It Works</a></li>
-                <li><a href="#our-clients" className="hover:text-blue-400">Our Clients</a></li>
-                <li><a href="#contact" className="hover:text-blue-400">Contact</a></li>
+                <li><a href="#services" className="hover:text-blue-400">Superpowers</a></li>
+                <li><a href="#how-it-works" className="hover:text-blue-400">Magic Revealed</a></li>
+                <li><a href="#our-clients" className="hover:text-blue-400">Success Stories</a></li>
+                <li><a href="#contact" className="hover:text-blue-400">Join the A-Team</a></li>
               </ul>
             </div>
             <div className="w-full md:w-1/3">
-              <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+              <h4 className="text-lg font-semibold mb-4">Bat-Signal Us</h4>
               <p>Email: taranmundkar@ttmunlimited.com</p>
-              <p>Phone: (307) 323-4221</p>
+              <p>Superhero Hotline: (307) 323-4221</p>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p>&copy; 2024 TTM Media. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} TTM Media. All rights reserved. No capes included.</p>
           </div>
         </div>
       </footer>
