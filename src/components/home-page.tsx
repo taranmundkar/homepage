@@ -29,10 +29,10 @@ export default function HomePage() {
             <span className="ml-2 text-2xl font-bold text-blue-600">TTM Media</span>
           </a>
           <div className="hidden md:flex space-x-6">
-            <a href="#services" className="text-gray-600 hover:text-blue-600">Superpowers</a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-blue-600">Magic Revealed</a>
-            <a href="#our-clients" className="text-gray-600 hover:text-blue-600">Success Stories</a>
-            <a href="#contact" className="text-gray-600 hover:text-blue-600">Join the A-Team</a>
+            <a href="#services" className="text-gray-700 hover:text-blue-600">Superpowers</a>
+            <a href="#how-it-works" className="text-gray-700 hover:text-blue-600">Magic Revealed</a>
+            <a href="#our-clients" className="text-gray-700 hover:text-blue-600">Success Stories</a>
+            <a href="#contact" className="text-gray-700 hover:text-blue-600">Join the A-Team</a>
           </div>
           <div className="flex space-x-4">
             <Link href="https://app.gohighlevel.com/?fp_ref=rev01" passHref>
@@ -85,7 +85,7 @@ export default function HomePage() {
 
         <section id="services" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Your AI Superpowers Await!</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Your AI Superpowers Await!</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -111,8 +111,8 @@ export default function HomePage() {
                   transition={{ delay: index * 0.2 }}
                 >
                   {service.icon}
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-gray-700">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-700">{service.title}</h3>
+                  <p className="text-gray-600">{service.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
 
         <section id="how-it-works" className="bg-gray-50 py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">How We Turn You Into a Real Estate Rockstar</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">How We Turn You Into a Real Estate Rockstar</h2>
             <div className="max-w-3xl mx-auto mb-16">
               {[
                 "We analyze your market faster than you can say 'sold above asking price'",
@@ -147,52 +147,75 @@ export default function HomePage() {
               {...fadeInUp}
               transition={{ delay: 0.6 }}
             >
-              <h3 className="text-2xl font-bold text-center mb-6">Witness the Magic in Action!</h3>
-              <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Play className="w-16 h-16 text-blue-600" />
+              <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">Witness the Magic in Action!</h3>
+              
+              {/* VSL Video */}
+              <div className="mb-12">
+                <h4 className="text-xl font-semibold mb-4 text-gray-700">Our Value-Packed VSL</h4>
+                <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/YOUR_VSL_VIDEO_ID"
+                    title="TTM Media VSL"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
                 </div>
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  poster="/video-thumbnail.jpg"
-                >
-                  <source src="/ttm-media-process.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
               </div>
-              <p className="text-center mt-4 text-gray-700">
-                Warning: This video contains scenes of extreme real estate success. Viewer discretion is advised.
+
+              {/* Process Video */}
+              <div>
+                <h4 className="text-xl font-semibold mb-4 text-gray-700">Our Revolutionary Process</h4>
+                <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                  <video
+                    className="w-full h-full object-cover"
+                    controls
+                    poster="/process-video-thumbnail.jpg"
+                  >
+                    <source src="https://your-cdn.com/ttm-media-process.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <Play className="w-20 h-20 text-blue-600 opacity-75" />
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-center mt-6 text-lg text-gray-600 font-semibold">
+                Warning: These videos contain scenes of extreme real estate success. Viewer discretion is advised.
               </p>
             </motion.div>
           </div>
         </section>
 
-        <section id="our-clients" className="py-20">
+        <section id="our-clients" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Real Estate Legends in the Making</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Real Estate Legends in the Making</h2>
+            <div className="grid md:grid-cols-2 gap-12">
               {[
                 {
                   title: "Sarah 'The Closer' Johnson",
-                  description: "From stressed-out agent to unstoppable selling machine in 6 months flat!"
+                  description: "From stressed-out agent to unstoppable selling machine in 6 months flat!",
+                  achievement: "Closed 50 deals in 3 months"
                 },
                 {
                   title: "Michael 'The Lead Magnet' Chen",
-                  description: "How Michael went from cold calls to hot deals with the power of AI"
+                  description: "How Michael went from cold calls to hot deals with the power of AI",
+                  achievement: "Generated 500+ qualified leads in 30 days"
                 }
               ].map((client, index) => (
                 <motion.div 
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-lg"
+                  className="bg-white p-8 rounded-lg shadow-xl"
                   {...fadeInUp}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <h3 className="text-xl font-semibold mb-2">{client.title}</h3>
-                  <p className="text-gray-700 mb-4">{client.description}</p>
-                  <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden">
+                  <h3 className="text-2xl font-bold mb-4 text-gray-700">{client.title}</h3>
+                  <p className="text-lg text-gray-600 mb-6">{client.description}</p>
+                  <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden mb-6">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Play className="w-12 h-12 text-blue-600" />
+                      <Play className="w-16 h-16 text-blue-600" />
                     </div>
                     <video
                       className="w-full h-full object-cover"
@@ -203,6 +226,9 @@ export default function HomePage() {
                       Your browser does not support the video tag.
                     </video>
                   </div>
+                  <div className="bg-blue-100 p-4 rounded-lg">
+                    <p className="text-xl font-semibold text-blue-600">{client.achievement}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -211,14 +237,14 @@ export default function HomePage() {
 
         <section id="contact" className="bg-blue-600 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Join the Real Estate Elite?</h2>
+            <h2 className="text-4xl font-bold mb-6">Ready to Join the Real Estate Elite?</h2>
             <p className="text-xl mb-8">Don't let another lead slip through your fingers! Grab your cape and let's make real estate history!</p>
             <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
               <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
                 Book Your Superhero Training Now!
               </Button>
             </Link>
-            <p className="text-sm mt-4">Hurry! Superpowers are going fast, and your competition is eyeing them!</p>
+            <p className="text-lg mt-6 font-semibold">Hurry! Superpowers are going fast, and your competition is eyeing them!</p>
           </div>
         </section>
       </main>
