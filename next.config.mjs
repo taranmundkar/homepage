@@ -5,7 +5,6 @@ const nextConfig = {
   images: {
     domains: ['hebbkx1anhila5yf.public.blob.vercel-storage.com'],
   },
-  // Add this to resolve the metadataBase warning
   async headers() {
     return [
       {
@@ -21,4 +20,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+export default nextConfig

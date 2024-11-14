@@ -29,10 +29,10 @@ export default function HomePage() {
             <span className="ml-2 text-2xl font-bold text-blue-600">TTM Media</span>
           </a>
           <div className="hidden md:flex space-x-6">
-            <a href="#services" className="text-gray-700 hover:text-blue-600">Superpowers</a>
-            <a href="#how-it-works" className="text-gray-700 hover:text-blue-600">Magic Revealed</a>
-            <a href="#our-clients" className="text-gray-700 hover:text-blue-600">Success Stories</a>
-            <a href="#contact" className="text-gray-700 hover:text-blue-600">Join the A-Team</a>
+            <a href="#services" className="text-gray-800 hover:text-blue-600">Superpowers</a>
+            <a href="#how-it-works" className="text-gray-800 hover:text-blue-600">Magic Revealed</a>
+            <a href="#our-clients" className="text-gray-800 hover:text-blue-600">Success Stories</a>
+            <a href="#contact" className="text-gray-800 hover:text-blue-600">Join the A-Team</a>
           </div>
           <div className="flex space-x-4">
             <Link href="https://app.gohighlevel.com/?fp_ref=rev01" passHref>
@@ -56,7 +56,7 @@ export default function HomePage() {
                 Unleash Your Inner Real Estate Superhero with AI Superpowers!
               </motion.h1>
               <motion.p 
-                className="text-xl text-gray-700 mb-8"
+                className="text-xl text-gray-800 mb-8"
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
               >
@@ -73,7 +73,7 @@ export default function HomePage() {
                 </Link>
               </motion.div>
               <motion.p
-                className="text-sm text-gray-600 mt-4"
+                className="text-sm text-gray-700 mt-4"
                 {...fadeInUp}
                 transition={{ delay: 0.6 }}
               >
@@ -85,7 +85,7 @@ export default function HomePage() {
 
         <section id="services" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Your AI Superpowers Await!</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Your AI Superpowers Await!</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -111,8 +111,8 @@ export default function HomePage() {
                   transition={{ delay: index * 0.2 }}
                 >
                   {service.icon}
-                  <h3 className="text-xl font-semibold mb-2 text-gray-700">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{service.title}</h3>
+                  <p className="text-gray-700">{service.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
 
         <section id="how-it-works" className="bg-gray-50 py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">How We Turn You Into a Real Estate Rockstar</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">How We Turn You Into a Real Estate Rockstar</h2>
             <div className="max-w-3xl mx-auto mb-16">
               {[
                 "We analyze your market faster than you can say 'sold above asking price'",
@@ -138,7 +138,7 @@ export default function HomePage() {
                   <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4">
                     {index + 1}
                   </div>
-                  <p className="text-gray-700">{step}</p>
+                  <p className="text-gray-800">{step}</p>
                 </motion.div>
               ))}
             </div>
@@ -147,43 +147,22 @@ export default function HomePage() {
               {...fadeInUp}
               transition={{ delay: 0.6 }}
             >
-              <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">Witness the Magic in Action!</h3>
-              
-              {/* VSL Video */}
-              <div className="mb-12">
-                <h4 className="text-xl font-semibold mb-4 text-gray-700">Our Value-Packed VSL</h4>
-                <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/YOUR_VSL_VIDEO_ID"
-                    title="TTM Media VSL"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+              <h3 className="text-3xl font-bold text-center mb-8 text-blue-600">Witness the Magic in Action!</h3>
+              <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Play className="w-20 h-20 text-blue-600" />
                 </div>
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  poster="/video-thumbnail.jpg"
+                >
+                  <source src="/ttm-media-process.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
-
-              {/* Process Video */}
-              <div>
-                <h4 className="text-xl font-semibold mb-4 text-gray-700">Our Revolutionary Process</h4>
-                <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden shadow-lg">
-                  <video
-                    className="w-full h-full object-cover"
-                    controls
-                    poster="/process-video-thumbnail.jpg"
-                  >
-                    <source src="https://your-cdn.com/ttm-media-process.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <Play className="w-20 h-20 text-blue-600 opacity-75" />
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-center mt-6 text-lg text-gray-600 font-semibold">
-                Warning: These videos contain scenes of extreme real estate success. Viewer discretion is advised.
+              <p className="text-center mt-6 text-lg text-gray-700 font-semibold">
+                Warning: This video contains scenes of extreme real estate success. Viewer discretion is advised.
               </p>
             </motion.div>
           </div>
@@ -191,7 +170,7 @@ export default function HomePage() {
 
         <section id="our-clients" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Real Estate Legends in the Making</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">Real Estate Legends in the Making</h2>
             <div className="grid md:grid-cols-2 gap-12">
               {[
                 {
@@ -211,8 +190,8 @@ export default function HomePage() {
                   {...fadeInUp}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <h3 className="text-2xl font-bold mb-4 text-gray-700">{client.title}</h3>
-                  <p className="text-lg text-gray-600 mb-6">{client.description}</p>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">{client.title}</h3>
+                  <p className="text-lg text-gray-700 mb-6">{client.description}</p>
                   <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden mb-6">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Play className="w-16 h-16 text-blue-600" />
