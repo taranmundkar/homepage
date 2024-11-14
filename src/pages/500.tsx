@@ -7,17 +7,19 @@ export default function Custom500() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-100 min-h-screen flex flex-col">
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Main navigation">
-          <a href="/" className="flex items-center" aria-label="TTM Media home">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
-              alt="TTM Media Robot Logo"
-              width={50}
-              height={50}
-              className="h-12 w-auto"
-            />
-            <span className="ml-2 text-2xl font-bold text-blue-600">TTM Media</span>
-          </a>
+        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <Link href="/">
+            <a className="flex items-center">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
+                alt="TTM Media Robot Logo"
+                width={50}
+                height={50}
+                className="h-12 w-auto"
+              />
+              <span className="ml-2 text-2xl font-bold text-blue-600">TTM Media</span>
+            </a>
+          </Link>
         </nav>
       </header>
 
