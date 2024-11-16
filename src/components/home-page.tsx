@@ -14,6 +14,44 @@ const fadeInUp = {
 }
 
 export default function HomePage() {
+  const services = [
+    {
+      icon: <Zap className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Lead Generation Lightning",
+      description: "Electrify your pipeline with high-voltage leads that'll make your sales meter go off the charts!"
+    },
+    {
+      icon: <MessageCircle className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "24/7 Charm-o-Matic Chatbot",
+      description: "Your tireless wingman that schmoozes leads while you snooze. It's like having a clone, but better!"
+    },
+    {
+      icon: <Calendar className="w-12 h-12 text-blue-600 mb-4" />,
+      title: "Time-Bending Calendar Filler",
+      description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It's not time travel, it's TTM!"
+    }
+  ]
+
+  const steps = [
+    "We analyze your market faster than you can say 'sold above asking price'",
+    "Our AI minions work 24/7 to flood your pipeline with grade-A leads",
+    "Smart chatbots charm your leads, leaving them begging for a meeting with you",
+    "You swoop in like a real estate superhero, ready to close deals and take names"
+  ]
+
+  const clients = [
+    {
+      title: "Sarah 'The Closer' Johnson",
+      description: "From stressed-out agent to unstoppable selling machine in 6 months flat!",
+      achievement: "Closed 50 deals in 3 months"
+    },
+    {
+      title: "Michael 'The Lead Magnet' Chen",
+      description: "How Michael went from cold calls to hot deals with the power of AI",
+      achievement: "Generated 500+ qualified leads in 30 days"
+    }
+  ]
+
   return (
     <div className="bg-white">
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
@@ -87,23 +125,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Your AI Superpowers Await!</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: <Zap className="w-12 h-12 text-blue-600 mb-4" />,
-                  title: "Lead Generation Lightning",
-                  description: "Electrify your pipeline with high-voltage leads that'll make your sales meter go off the charts!"
-                },
-                {
-                  icon: <MessageCircle className="w-12 h-12 text-blue-600 mb-4" />,
-                  title: "24/7 Charm-o-Matic Chatbot",
-                  description: "Your tireless wingman that schmoozes leads while you snooze. It's like having a clone, but better!"
-                },
-                {
-                  icon: <Calendar className="w-12 h-12 text-blue-600 mb-4" />,
-                  title: "Time-Bending Calendar Filler",
-                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It's not time travel, it's TTM!"
-                }
-              ].map((service, index) => (
+              {services.map((service, index) => (
                 <motion.div 
                   key={index}
                   className="bg-white p-6 rounded-lg shadow-lg text-center"
@@ -123,12 +145,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">How We Turn You Into a Real Estate Rockstar</h2>
             <div className="max-w-3xl mx-auto mb-16">
-              {[
-                "We analyze your market faster than you can say 'sold above asking price'",
-                "Our AI minions work 24/7 to flood your pipeline with grade-A leads",
-                "Smart chatbots charm your leads, leaving them begging for a meeting with you",
-                "You swoop in like a real estate superhero, ready to close deals and take names"
-              ].map((step, index) => (
+              {steps.map((step, index) => (
                 <motion.div 
                   key={index}
                   className="flex items-start mb-8"
@@ -205,18 +222,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">Real Estate Legends in the Making</h2>
             <div className="grid md:grid-cols-2 gap-12">
-              {[
-                {
-                  title: "Sarah 'The Closer' Johnson",
-                  description: "From stressed-out agent to unstoppable selling machine in 6 months flat!",
-                  achievement: "Closed 50 deals in 3 months"
-                },
-                {
-                  title: "Michael 'The Lead Magnet' Chen",
-                  description: "How Michael went from cold calls to hot deals with the power of AI",
-                  achievement: "Generated 500+ qualified leads in 30 days"
-                }
-              ].map((client, index) => (
+              {clients.map((client, index) => (
                 <motion.div 
                   key={index}
                   className="bg-white p-8 rounded-lg shadow-xl"
@@ -281,9 +287,9 @@ export default function HomePage() {
               <h4 className="text-lg font-semibold mb-4">Superhero HQ</h4>
               <ul>
                 <li><Link href="#services" className="hover:text-blue-400">Superpowers</Link></li>
-                <li><Link href="#how-it-works"className="hover:text-blue-400">Magic Revealed</Link></li>
-                <li><Link href="#our-clients"className="hover:text-blue-400">Success Stories</Link></li>
-                <li><Link href="#contact"className="hover:text-blue-400">Join the A-Team</Link></li>
+                <li><Link href="#how-it-works" className="hover:text-blue-400">Magic Revealed</Link></li>
+                <li><Link href="#our-clients" className="hover:text-blue-400">Success Stories</Link></li>
+                <li><Link href="#contact" className="hover:text-blue-400">Join the A-Team</Link></li>
               </ul>
             </div>
             <div className="w-full md:w-1/3">
