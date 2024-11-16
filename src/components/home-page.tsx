@@ -13,45 +13,45 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 }
 
+const services = [
+  {
+    icon: <Zap className="w-12 h-12 text-blue-600 mb-4" />,
+    title: "Lead Generation Lightning",
+    description: "Electrify your pipeline with high-voltage leads that&apos;ll make your sales meter go off the charts!"
+  },
+  {
+    icon: <MessageCircle className="w-12 h-12 text-blue-600 mb-4" />,
+    title: "24/7 Charm-o-Matic Chatbot",
+    description: "Your tireless wingman that schmoozes leads while you snooze. It&apos;s like having a clone, but better!"
+  },
+  {
+    icon: <Calendar className="w-12 h-12 text-blue-600 mb-4" />,
+    title: "Time-Bending Calendar Filler",
+    description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It&apos;s not time travel, it&apos;s TTM!"
+  }
+]
+
+const steps = [
+  "We analyze your market faster than you can say &apos;sold above asking price&apos;",
+  "Our AI minions work 24/7 to flood your pipeline with grade-A leads",
+  "Smart chatbots charm your leads, leaving them begging for a meeting with you",
+  "You swoop in like a real estate superhero, ready to close deals and take names"
+]
+
+const clients = [
+  {
+    title: "Sarah &apos;The Closer&apos; Johnson",
+    description: "From stressed-out agent to unstoppable selling machine in 6 months flat!",
+    achievement: "Closed 50 deals in 3 months"
+  },
+  {
+    title: "Michael &apos;The Lead Magnet&apos; Chen",
+    description: "How Michael went from cold calls to hot deals with the power of AI",
+    achievement: "Generated 500+ qualified leads in 30 days"
+  }
+]
+
 export default function HomePage() {
-  const services = [
-    {
-      icon: <Zap className="w-12 h-12 text-blue-600 mb-4" />,
-      title: "Lead Generation Lightning",
-      description: "Electrify your pipeline with high-voltage leads that'll make your sales meter go off the charts!"
-    },
-    {
-      icon: <MessageCircle className="w-12 h-12 text-blue-600 mb-4" />,
-      title: "24/7 Charm-o-Matic Chatbot",
-      description: "Your tireless wingman that schmoozes leads while you snooze. It's like having a clone, but better!"
-    },
-    {
-      icon: <Calendar className="w-12 h-12 text-blue-600 mb-4" />,
-      title: "Time-Bending Calendar Filler",
-      description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It's not time travel, it's TTM!"
-    }
-  ]
-
-  const steps = [
-    "We analyze your market faster than you can say 'sold above asking price'",
-    "Our AI minions work 24/7 to flood your pipeline with grade-A leads",
-    "Smart chatbots charm your leads, leaving them begging for a meeting with you",
-    "You swoop in like a real estate superhero, ready to close deals and take names"
-  ]
-
-  const clients = [
-    {
-      title: "Sarah 'The Closer' Johnson",
-      description: "From stressed-out agent to unstoppable selling machine in 6 months flat!",
-      achievement: "Closed 50 deals in 3 months"
-    },
-    {
-      title: "Michael 'The Lead Magnet' Chen",
-      description: "How Michael went from cold calls to hot deals with the power of AI",
-      achievement: "Generated 500+ qualified leads in 30 days"
-    }
-  ]
-
   return (
     <div className="bg-white">
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
@@ -73,10 +73,10 @@ export default function HomePage() {
             <Link href="#contact" className="text-sm text-gray-800 hover:text-blue-600">Join the A-Team</Link>
           </div>
           <div className="flex space-x-2">
-            <Link href="https://app.gohighlevel.com/?fp_ref=rev01" passHref>
+            <Link href="https://app.gohighlevel.com/?fp_ref=rev01">
               <Button variant="outline" className="bg-white text-blue-600 hover:bg-blue-50 text-xs px-2 py-1">LOGIN</Button>
             </Link>
-            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
+            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 text-xs px-2 py-1">Claim Your Superpower</Button>
             </Link>
           </div>
@@ -104,7 +104,7 @@ export default function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 0.4 }}
               >
-                <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
+                <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz">
                   <Button className="bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-3">
                     Activate Your AI Superpowers Now!
                   </Button>
@@ -155,7 +155,7 @@ export default function HomePage() {
                   <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mr-4">
                     {index + 1}
                   </div>
-                  <p className="text-gray-800">{step}</p>
+                  <p className="text-gray-800" dangerouslySetInnerHTML={{ __html: step }} />
                 </motion.div>
               ))}
             </div>
@@ -185,7 +185,7 @@ export default function HomePage() {
                   ></iframe>
                 </div>
                 <p className="text-center mt-4 text-sm text-gray-700">
-                  Discover how we're revolutionizing real estate with AI
+                  Discover how we&apos;re revolutionizing real estate with AI
                 </p>
               </motion.div>
 
@@ -256,8 +256,8 @@ export default function HomePage() {
         <section id="contact" className="bg-blue-600 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Join the Real Estate Elite?</h2>
-            <p className="text-xl mb-8">Don't let another lead slip through your fingers! Grab your cape and let's make real estate history!</p>
-            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
+            <p className="text-xl mb-8">Don&apos;t let another lead slip through your fingers! Grab your cape and let&apos;s make real estate history!</p>
+            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz">
               <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
                 Book Your Superhero Training Now!
               </Button>
