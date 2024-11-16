@@ -30,9 +30,6 @@ export default function TermsAndConditions() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold mb-6">Terms and Conditions</h1>
           <p className="text-gray-600 mb-4">Last updated: {new Date().toLocaleDateString()}</p>
-          
-          {/* Debug: Start of content */}
-          <div className="bg-red-100 p-2 mb-4">Content starts here</div>
 
           <div className="space-y-6 text-gray-800">
             <p className="text-lg">
@@ -133,9 +130,6 @@ export default function TermsAndConditions() {
               </ul>
             </section>
           </div>
-
-          {/* Debug: End of content */}
-          <div className="bg-red-100 p-2 mt-4">Content ends here</div>
         </div>
       </main>
 
