@@ -17,35 +17,35 @@ export default function HomePage() {
   return (
     <div className="bg-white">
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
-        <nav className="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Main navigation">
+        <nav className="container mx-auto px-2 py-2 flex justify-between items-center" aria-label="Main navigation">
           <Link href="/" className="flex items-center" aria-label="TTM Media home">
             <Image
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
               alt="TTM Media Robot Logo"
-              width={50}
-              height={50}
-              className="h-12 w-auto"
+              width={40}
+              height={40}
+              className="h-10 w-auto"
             />
-            <span className="ml-2 text-2xl font-bold text-blue-600">TTM Media</span>
+            <span className="ml-2 text-xl font-bold text-blue-600">TTM Media</span>
           </Link>
-          <div className="hidden md:flex space-x-6">
-            <Link href="#services" className="text-gray-800 hover:text-blue-600">Superpowers</Link>
-            <Link href="#how-it-works" className="text-gray-800 hover:text-blue-600">Magic Revealed</Link>
-            <Link href="#our-clients" className="text-gray-800 hover:text-blue-600">Success Stories</Link>
-            <Link href="#contact" className="text-gray-800 hover:text-blue-600">Join the A-Team</Link>
+          <div className="hidden md:flex space-x-4">
+            <Link href="#services" className="text-sm text-gray-800 hover:text-blue-600">Superpowers</Link>
+            <Link href="#how-it-works" className="text-sm text-gray-800 hover:text-blue-600">Magic Revealed</Link>
+            <Link href="#our-clients" className="text-sm text-gray-800 hover:text-blue-600">Success Stories</Link>
+            <Link href="#contact" className="text-sm text-gray-800 hover:text-blue-600">Join the A-Team</Link>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex space-x-2">
             <Link href="https://app.gohighlevel.com/?fp_ref=rev01" passHref>
-              <Button variant="outline" className="bg-white text-blue-600 hover:bg-blue-50 text-sm px-4 py-2">LOGIN</Button>
+              <Button variant="outline" className="bg-white text-blue-600 hover:bg-blue-50 text-xs px-2 py-1">LOGIN</Button>
             </Link>
             <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 text-sm px-4 py-2">Claim Your Superpower</Button>
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 text-xs px-2 py-1">Claim Your Superpower</Button>
             </Link>
           </div>
         </nav>
       </header>
 
-      <main className="pt-20">
+      <main className="pt-16">
         <section className="bg-gradient-to-r from-blue-50 to-indigo-100 py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
@@ -91,17 +91,17 @@ export default function HomePage() {
                 {
                   icon: <Zap className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "Lead Generation Lightning",
-                  description: "Electrify your pipeline with high-voltage leads that&apos;ll make your sales meter go off the charts!"
+                  description: "Electrify your pipeline with high-voltage leads that'll make your sales meter go off the charts!"
                 },
                 {
                   icon: <MessageCircle className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "24/7 Charm-o-Matic Chatbot",
-                  description: "Your tireless wingman that schmoozes leads while you snooze. It&apos;s like having a clone, but better!"
+                  description: "Your tireless wingman that schmoozes leads while you snooze. It's like having a clone, but better!"
                 },
                 {
                   icon: <Calendar className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "Time-Bending Calendar Filler",
-                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It&apos;s not time travel, it&apos;s TTM!"
+                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It's not time travel, it's TTM!"
                 }
               ].map((service, index) => (
                 <motion.div 
@@ -124,7 +124,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">How We Turn You Into a Real Estate Rockstar</h2>
             <div className="max-w-3xl mx-auto mb-16">
               {[
-                "We analyze your market faster than you can say &apos;sold above asking price&apos;",
+                "We analyze your market faster than you can say 'sold above asking price'",
                 "Our AI minions work 24/7 to flood your pipeline with grade-A leads",
                 "Smart chatbots charm your leads, leaving them begging for a meeting with you",
                 "You swoop in like a real estate superhero, ready to close deals and take names"
@@ -155,19 +155,20 @@ export default function HomePage() {
                 transition={{ delay: 0.2 }}
               >
                 <h3 className="text-2xl font-bold text-center mb-4 text-blue-600">Our Vision</h3>
-                <div className="aspect-video">
+                <div className="aspect-video relative">
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/YOUR_VSL_VIDEO_ID"
-                    title="TTM Media VSL"
+                    src="https://www.youtube.com/embed/flXOHljIx4Y"
+                    title="TTM Media Vision"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    className="absolute inset-0"
                   ></iframe>
                 </div>
                 <p className="text-center mt-4 text-sm text-gray-700">
-                  Discover how we&apos;re revolutionizing real estate with AI
+                  Discover how we're revolutionizing real estate with AI
                 </p>
               </motion.div>
 
@@ -177,15 +178,16 @@ export default function HomePage() {
                 transition={{ delay: 0.4 }}
               >
                 <h3 className="text-2xl font-bold text-center mb-4 text-blue-600">Our Process</h3>
-                <div className="aspect-video">
+                <div className="aspect-video relative">
                   <iframe
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/YOUR_PROCESS_VIDEO_ID"
+                    src="https://www.youtube.com/embed/LinoT_eKRnM"
                     title="TTM Media Process"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    className="absolute inset-0"
                   ></iframe>
                 </div>
                 <p className="text-center mt-4 text-sm text-gray-700">
@@ -205,12 +207,12 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-12">
               {[
                 {
-                  title: "Sarah &apos;The Closer&apos; Johnson",
+                  title: "Sarah 'The Closer' Johnson",
                   description: "From stressed-out agent to unstoppable selling machine in 6 months flat!",
                   achievement: "Closed 50 deals in 3 months"
                 },
                 {
-                  title: "Michael &apos;The Lead Magnet&apos; Chen",
+                  title: "Michael 'The Lead Magnet' Chen",
                   description: "How Michael went from cold calls to hot deals with the power of AI",
                   achievement: "Generated 500+ qualified leads in 30 days"
                 }
@@ -248,7 +250,7 @@ export default function HomePage() {
         <section id="contact" className="bg-blue-600 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Join the Real Estate Elite?</h2>
-            <p className="text-xl mb-8">Don&apos;t let another lead slip through your fingers! Grab your cape and let&apos;s make real estate history!</p>
+            <p className="text-xl mb-8">Don't let another lead slip through your fingers! Grab your cape and let's make real estate history!</p>
             <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
               <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
                 Book Your Superhero Training Now!
@@ -279,9 +281,9 @@ export default function HomePage() {
               <h4 className="text-lg font-semibold mb-4">Superhero HQ</h4>
               <ul>
                 <li><Link href="#services" className="hover:text-blue-400">Superpowers</Link></li>
-                <li><Link href="#how-it-works" className="hover:text-blue-400">Magic Revealed</Link></li>
-                <li><Link href="#our-clients" className="hover:text-blue-400">Success Stories</Link></li>
-                <li><Link href="#contact" className="hover:text-blue-400">Join the A-Team</Link></li>
+                <li><Link href="#how-it-works"className="hover:text-blue-400">Magic Revealed</Link></li>
+                <li><Link href="#our-clients"className="hover:text-blue-400">Success Stories</Link></li>
+                <li><Link href="#contact"className="hover:text-blue-400">Join the A-Team</Link></li>
               </ul>
             </div>
             <div className="w-full md:w-1/3">
