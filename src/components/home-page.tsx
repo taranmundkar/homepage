@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, MessageCircle, Play, Zap } from 'lucide-react'
+import { Calendar, MessageCircle, Zap } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
 import Link from 'next/link'
@@ -14,6 +14,8 @@ const fadeInUp = {
 }
 
 export default function HomePage() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <div className="bg-white">
       <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
@@ -105,7 +107,7 @@ export default function HomePage() {
                 }
               ].map((service, index) => (
                 <motion.div 
-                  key={index}
+                  key={service.title}
                   className="bg-white p-6 rounded-lg shadow-lg text-center"
                   {...fadeInUp}
                   transition={{ delay: index * 0.2 }}
@@ -130,7 +132,7 @@ export default function HomePage() {
                 "You swoop in like a real estate superhero, ready to close deals and take names"
               ].map((step, index) => (
                 <motion.div 
-                  key={index}
+                  key={step}
                   className="flex items-start mb-8"
                   {...fadeInUp}
                   transition={{ delay: index * 0.2 }}
@@ -167,7 +169,7 @@ export default function HomePage() {
                   ></iframe>
                 </div>
                 <p className="text-center mt-4 text-sm text-gray-700">
-                  Discover how we're revolutionizing real estate with AI
+                  Discover how we&apos;re revolutionizing real estate with AI
                 </p>
               </motion.div>
 
@@ -208,7 +210,7 @@ export default function HomePage() {
                 {...fadeInUp}
               >
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">Secrets Of Success In Real Estate</h3>
-                <p className="text-lg text-gray-700 mb-6">Harry Hooi's journey from oil and gas to top Calgary realtor</p>
+                <p className="text-lg text-gray-700 mb-6">Harry Hooi&apos;s journey from oil and gas to top Calgary realtor</p>
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <iframe
                     className="w-full h-full absolute top-0 left-0"
@@ -244,7 +246,7 @@ export default function HomePage() {
         <section id="contact" className="bg-blue-600 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready To Join The Real Estate Elite?</h2>
-            <p className="text-xl mb-8">Don't let another lead slip through your fingers! Grab your cape and let's make real estate history!</p>
+            <p className="text-xl mb-8">Don&apos;t let another lead slip through your fingers! Grab your cape and let&apos;s make real estate history!</p>
             <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
               <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
                 Book Your Superhero Training Now!
@@ -287,7 +289,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p>&copy; {new Date().getFullYear()} TTM Media. All rights reserved. No capes included.</p>
+            <p>&copy; {currentYear} TTM Media. All rights reserved. No capes included.</p>
             <div className="mt-4 space-x-4">
               <Link href="/privacy-policy">
                 <Button variant="link" className="text-white hover:text-blue-400">Privacy Policy</Button>
