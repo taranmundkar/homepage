@@ -38,10 +38,10 @@ export default function HomePage() {
           </div>
           <div className="flex space-x-2">
             <Link href="https://app.gohighlevel.com/?fp_ref=rev01" passHref>
-              <Button variant="outline" className="bg-white text-blue-600 hover:bg-blue-50 text-xs px-3 py-2">LOGIN</Button>
+              <Button variant="outline" className="bg-white text-blue-600 hover:bg-blue-50 text-xs px-2 py-1 sm:px-3 sm:py-2">LOGIN</Button>
             </Link>
             <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 text-xs px-3 py-2">Claim your superpower</Button>
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 text-xs px-2 py-1 sm:px-3 sm:py-2">Claim your superpower</Button>
             </Link>
           </div>
         </nav>
@@ -52,13 +52,13 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <motion.h1 
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6"
                 {...fadeInUp}
               >
                 Unleash Your Inner Real Estate Superhero With AI Superpowers!
               </motion.h1>
               <motion.p 
-                className="text-xl text-gray-800 mb-8"
+                className="text-lg sm:text-xl text-gray-800 mb-8"
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
               >
@@ -69,13 +69,13 @@ export default function HomePage() {
                 transition={{ delay: 0.4 }}
               >
                 <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
-                  <Button className="bg-blue-600 text-white hover:bg-blue-700 text-lg px-8 py-3">
+                  <Button className="bg-blue-600 text-white hover:bg-blue-700 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
                     Activate your AI superpowers now!
                   </Button>
                 </Link>
               </motion.div>
               <motion.p
-                className="text-sm text-gray-700 mt-4"
+                className="text-xs sm:text-sm text-gray-700 mt-4"
                 {...fadeInUp}
                 transition={{ delay: 0.6 }}
               >
@@ -87,7 +87,7 @@ export default function HomePage() {
 
         <section id="services" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Your AI Superpowers Await!</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12 text-gray-900">Your AI Superpowers Await!</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -123,7 +123,7 @@ export default function HomePage() {
 
         <section id="how-it-works" className="bg-gray-50 py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">How We Turn You Into A Real Estate Rockstar</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12 text-gray-900">How We Turn You Into A Real Estate Rockstar</h2>
             <div className="max-w-3xl mx-auto mb-16">
               {[
                 "We analyze your market faster than you can say 'sold above asking price'",
@@ -149,14 +149,14 @@ export default function HomePage() {
 
         <section id="witness-magic" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Witness The Magic In Action!</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-12 text-gray-900">Witness The Magic In Action!</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <motion.div
                 className="bg-white p-6 rounded-lg shadow-lg"
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
               >
-                <h3 className="text-2xl font-bold text-center mb-4 text-blue-600">Our Vision</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-center mb-4 text-blue-600">Our Vision</h3>
                 <div className="aspect-video">
                   <iframe
                     width="100%"
@@ -178,7 +178,7 @@ export default function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 0.4 }}
               >
-                <h3 className="text-2xl font-bold text-center mb-4 text-blue-600">Our Process</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-center mb-4 text-blue-600">Our Process</h3>
                 <div className="aspect-video">
                   <iframe
                     width="100%"
@@ -195,7 +195,7 @@ export default function HomePage() {
                 </p>
               </motion.div>
             </div>
-            <p className="text-center mt-8 text-lg text-gray-700 font-semibold">
+            <p className="text-center mt-8 text-base sm:text-lg text-gray-700 font-semibold">
               Warning: These videos contain scenes of extreme real estate success. Viewer discretion is advised.
             </p>
           </div>
@@ -203,14 +203,14 @@ export default function HomePage() {
 
         <section id="our-clients" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">Real Estate Legends In The Making</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-blue-600">Real Estate Legends In The Making</h2>
             <div className="grid md:grid-cols-2 gap-12">
               <motion.div 
                 className="bg-white p-8 rounded-lg shadow-xl"
                 {...fadeInUp}
               >
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Secrets Of Success In Real Estate</h3>
-                <p className="text-lg text-gray-700 mb-6">Harry Hooi&apos;s journey from oil and gas to top Calgary realtor</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">Secrets Of Success In Real Estate</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6">Harry Hooi&apos;s journey from oil and gas to top Calgary realtor</p>
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <iframe
                     className="w-full h-full absolute top-0 left-0"
@@ -227,8 +227,8 @@ export default function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
               >
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">The Path To Real Estate Excellence</h3>
-                <p className="text-lg text-gray-700 mb-6">Rion Powell: Transforming your real estate career with AI and innovation</p>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">The Path To Real Estate Excellence</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6">Rion Powell: Transforming your real estate career with AI and innovation</p>
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <iframe
                     className="w-full h-full absolute top-0 left-0"
@@ -245,14 +245,14 @@ export default function HomePage() {
 
         <section id="contact" className="bg-blue-600 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready To Join The Real Estate Elite?</h2>
-            <p className="text-xl mb-8">Don&apos;t let another lead slip through your fingers! Grab your cape and let&apos;s make real estate history!</p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready To Join The Real Estate Elite?</h2>
+            <p className="text-lg sm:text-xl mb-8">Don&apos;t let another lead slip through your fingers! Grab your cape and let&apos;s make real estate history!</p>
             <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" passHref>
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-3">
+              <Button className="bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
                 Book Your Superhero Training Now!
               </Button>
             </Link>
-            <p className="text-lg mt-6 font-semibold">Hurry! Superpowers are going fast, and your competition is eyeing them!</p>
+            <p className="text-base sm:text-lg mt-6 font-semibold">Hurry! Superpowers are going fast, and your competition is eyeing them!</p>
           </div>
         </section>
       </main>
