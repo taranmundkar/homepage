@@ -41,12 +41,12 @@ export default function HomePage() {
             <Link href="#contact" className="text-sm text-gray-800 hover:text-blue-600">Join the A-Team</Link>
           </div>
           <div className="flex space-x-2">
-            <Link href="https://app.gohighlevel.com/?fp_ref=rev01">
+            <Link href="https://app.gohighlevel.com/?fp_ref=rev01" legacyBehavior>
               <Button variant="outline" className="bg-white text-blue-600 hover:bg-blue-50 text-xs px-3 py-2">
                 Login
               </Button>
             </Link>
-            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz">
+            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" legacyBehavior>
               <Button className="bg-blue-600 text-white hover:bg-blue-700 text-xs px-3 py-2">
                 Claim Your Superpower
               </Button>
@@ -76,7 +76,7 @@ export default function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 0.4 }}
               >
-                <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz">
+                <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" legacyBehavior>
                   <Button className="bg-blue-600 text-white hover:bg-blue-700 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
                     Let's Accelera Your Business Today
                   </Button>
@@ -253,7 +253,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready To Join The Real Estate Elite?</h2>
             <p className="text-lg sm:text-xl mb-8">Don't let another lead slip through your fingers! Grab your cape and let's make real estate history!</p>
-            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz">
+            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" legacyBehavior>
               <Button className="bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
                 Book Your Superhero Training Now!
               </Button>
@@ -269,8 +269,8 @@ export default function HomePage() {
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <div className="flex items-center mb-4">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
-                alt="TTM Media Robot Logo"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
+                  alt="TTM Media Robot Logo"
                   width={40}
                   height={40}
                   className="h-10 w-auto mr-2"
@@ -297,10 +297,10 @@ export default function HomePage() {
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
             <p>&copy; {currentYear} TTM Media. All Rights Reserved. No Capes Included.</p>
             <div className="mt-4 space-x-4">
-              <Link href="/privacy-policy">
+              <Link href="/privacy-policy" legacyBehavior>
                 <Button variant="link" className="text-white hover:text-blue-400">Privacy Policy</Button>
               </Link>
-              <Link href="/terms-and-conditions">
+              <Link href="/terms-and-conditions" legacyBehavior>
                 <Button variant="link" className="text-white hover:text-blue-400">Terms And Conditions</Button>
               </Link>
             </div>
