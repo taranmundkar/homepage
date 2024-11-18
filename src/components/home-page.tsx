@@ -13,10 +13,6 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 }
 
-const capitalizeEveryWord = (str: string) => {
-  return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-}
-
 export default function HomePage() {
   const currentYear = new Date().getFullYear()
 
@@ -269,7 +265,7 @@ export default function HomePage() {
             <div className="w-full md:w-1/3 mb-6 md:mb-0">
               <div className="flex items-center mb-4">
                 <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
                   alt="TTM Media Robot Logo"
                   width={40}
                   height={40}
