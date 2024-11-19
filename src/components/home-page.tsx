@@ -104,17 +104,17 @@ export default function HomePage() {
                 {
                   icon: <Zap className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "Lead Generation Lightning",
-                  description: "Electrify your pipeline with high-voltage leads that&apos;ll make your sales meter go off the charts!"
+                  description: "Electrify your pipeline with high-voltage leads that'll make your sales meter go off the charts!"
                 },
                 {
                   icon: <MessageCircle className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "24/7 Charm-o-Matic Chatbot",
-                  description: "Your tireless wingman that schmoozes leads while you snooze. It&apos;s like having a clone, but better!"
+                  description: "Your tireless wingman that schmoozes leads while you snooze. It's like having a clone, but better!"
                 },
                 {
                   icon: <Calendar className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "Time-Bending Calendar Filler",
-                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It&apos;s not time travel, it&apos;s TTM!"
+                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It's not time travel, it&apos;s TTM!"
                 }
               ].map((service, index) => (
                 <motion.div 
@@ -179,7 +179,7 @@ export default function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 0.2 }}
               >
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">The Path To Real Estate Excellence</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">The Path To Real Estate Perfection</h3>
                 <p className="text-base sm:text-lg text-gray-700 mb-6">Rion Powell: Transforming Your Real Estate Career With AI And Innovation</p>
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <iframe
