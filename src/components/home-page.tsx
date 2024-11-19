@@ -81,7 +81,7 @@ export default function HomePage() {
               >
                 <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" legacyBehavior>
                   <Button className="bg-blue-600 text-white hover:bg-blue-700 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
-                    Let&apos;s Accelera Your Business Today
+                    Let's Accelera Your Business Today
                   </Button>
                 </Link>
               </motion.div>
@@ -90,7 +90,7 @@ export default function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 0.6 }}
               >
-                Warning: may cause extreme success and uncontrollable laughter at your competition
+                Warning: May cause extreme success and uncontrollable laughter at your competition
               </motion.p>
             </div>
           </div>
@@ -216,7 +216,7 @@ export default function HomePage() {
                   ></iframe>
                 </div>
                 <p className="text-center mt-4 text-sm text-gray-700">
-                  Discover How We&apos;re Revolutionizing Real Estate With AI
+                  Discover How We're Revolutionizing Real Estate With AI
                 </p>
               </motion.div>
 
@@ -242,7 +242,7 @@ export default function HomePage() {
               </motion.div>
             </div>
             <p className="text-center mt-8 text-base sm:text-lg text-gray-700 font-semibold">
-              Warning: these videos contain scenes of extreme real estate success. Viewer discretion is advised.
+              Warning: These videos contain scenes of extreme real estate success. Viewer discretion is advised.
             </p>
           </div>
         </section>
@@ -250,7 +250,7 @@ export default function HomePage() {
         <section id="contact" className="bg-blue-600 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready To Join The Real Estate Elite?</h2>
-            <p className="text-lg sm:text-xl mb-8">Don&apos;t let another lead slip through your fingers! Grab your cape and let&apos;s make real estate history!</p>
+            <p className="text-lg sm:text-xl mb-8">Don't let another lead slip through your fingers! Grab your cape and let's make real estate history!</p>
             <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" legacyBehavior>
               <Button className="bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
                 Book Your Superhero Training Now!
@@ -262,49 +262,49 @@ export default function HomePage() {
       </main>
 
       <footer className="bg-gray-800 text-white py-10">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-between">
-            <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <div className="flex items-center mb-4">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
-                  alt="TTM Media Robot Logo"
-                  width={40}
-                  height={40}
-                  className="h-10 w-auto mr-2"
-                />
-                <span className="text-2xl font-bold">TTM MEDIA</span>
-              </div>
-              <p>Turning Ordinary Agents Into Extraordinary Real Estate Superheroes!</p>
-            </div>
-            <div className="w-full md:w-1/3 mb-6 md:mb-0">
-              <h4 className="text-lg font-semibold mb-4">SUPERHERO HQ</h4>
-              <ul>
-                <li><Link href="#services" className="hover:text-blue-400">Superpowers</Link></li>
-                <li><Link href="#how-it-works" className="hover:text-blue-400">Magic Revealed</Link></li>
-                <li><Link href="#our-clients" className="hover:text-blue-400">Success Stories</Link></li>
-                <li><Link href="#contact" className="hover:text-blue-400">Join The A-Team</Link></li>
-              </ul>
-            </div>
-            <div className="w-full md:w-1/3">
-              <h4 className="text-lg font-semibold mb-4">Bat-Signal Us</h4>
-              <p>Email: taranmundkar@ttmunlimited.com</p>
-              <p>Superhero Hotline: (307) 323-4221</p>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p>&copy; {currentYear} TTM Media. All Rights Reserved. No Capes Included.</p>
-            <div className="mt-4 space-x-4">
-              <Link href="/privacy-policy" legacyBehavior>
-                <Button variant="link" className="text-white hover:text-blue-400">Privacy Policy</Button>
-              </Link>
-              <Link href="/terms-and-conditions" legacyBehavior>
-                <Button variant="link" className="text-white hover:text-blue-400">Terms And Conditions</Button>
-              </Link>
-            </div>
-          </div>
+  <div className="container mx-auto px-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="mb-6 md:mb-0">
+        <div className="flex items-center mb-4">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ttm-media-robot-logo-DU1R42hfIbNOGG9wESDZ0GUppNJofo.svg"
+            alt="TTM Media Robot Logo"
+            width={40}
+            height={40}
+            className="h-10 w-auto mr-2"
+          />
+          <span className="text-2xl font-bold">TTM MEDIA</span>
         </div>
-      </footer>
+        <p className="mt-2">Turning Ordinary Agents Into Extraordinary Real Estate Superheroes!</p>
+      </div>
+      <div className="mb-6 md:mb-0">
+        <h4 className="text-lg font-semibold mb-4">SUPERHERO HQ</h4>
+        <ul className="space-y-2">
+          <li><Link href="#services" className="hover:text-blue-400">Superpowers</Link></li>
+          <li><Link href="#how-it-works" className="hover:text-blue-400">Magic Revealed</Link></li>
+          <li><Link href="#our-clients" className="hover:text-blue-400">Success Stories</Link></li>
+          <li><Link href="#contact" className="hover:text-blue-400">Join The A-Team</Link></li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="text-lg font-semibold mb-4">Bat-Signal Us</h4>
+        <p className="mb-2">Email: taranmundkar@ttmunlimited.com</p>
+        <p>Superhero Hotline: (307) 323-4221</p>
+      </div>
+    </div>
+    <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+      <p>&copy; {currentYear} TTM Media. All Rights Reserved. No Capes Included.</p>
+      <div className="mt-4 space-x-4">
+        <Link href="/privacy-policy" legacyBehavior>
+          <Button variant="link" className="text-white hover:text-blue-400">Privacy Policy</Button>
+        </Link>
+        <Link href="/terms-and-conditions" legacyBehavior>
+          <Button variant="link" className="text-white hover:text-blue-400">Terms And Conditions</Button>
+        </Link>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   )
 }
