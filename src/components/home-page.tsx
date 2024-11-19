@@ -66,7 +66,7 @@ export default function HomePage() {
                 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6"
                 {...fadeInUp}
               >
-                Unleash Your Inner Real Estate Superhero
+                Unleash Your Inner Real Estate Superhero With Your Superpower: Accelera
               </motion.h1>
               <motion.p 
                 className="text-lg sm:text-xl text-gray-800 mb-8"
