@@ -79,9 +79,9 @@ export default function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 0.4 }}
               >
-                <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" legacyBehavior>
+                <Link href="/free-resource" legacyBehavior>
                   <Button className="bg-blue-600 text-white hover:bg-blue-700 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
-                    Let&apos;s Accelera Your Business Today
+                    Let's Accelera Your Business Today
                   </Button>
                 </Link>
               </motion.div>
@@ -162,7 +162,7 @@ export default function HomePage() {
                 {...fadeInUp}
               >
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">Secrets Of Success In Real Estate</h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6">Harry Hooi&apos;s Journey From Oil And Gas To Top Calgary Realtor</p>
+                <p className="text-base sm:text-lg text-gray-700 mb-6">Harry Hooi's Journey From Oil And Gas To Top Calgary Realtor</p>
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <iframe
                     className="w-full h-full absolute top-0 left-0"
@@ -216,7 +216,7 @@ export default function HomePage() {
                   ></iframe>
                 </div>
                 <p className="text-center mt-4 text-sm text-gray-700">
-                  Discover How We&apos;re Revolutionizing Real Estate With AI
+                  Discover How We're Revolutionizing Real Estate With AI
                 </p>
               </motion.div>
 
@@ -250,8 +250,8 @@ export default function HomePage() {
         <section id="contact" className="bg-blue-600 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready To Join The Real Estate Elite?</h2>
-            <p className="text-lg sm:text-xl mb-8">Don&apos;t let another lead slip through your fingers! Grab your cape and let&apos;s make real estate history!</p>
-            <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" legacyBehavior>
+            <p className="text-lg sm:text-xl mb-8">Don't let another lead slip through your fingers! Grab your cape and let's make real estate history!</p>
+            <Link href="/free-resource" legacyBehavior>
               <Button className="bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
                 Book Your Superhero Training Now!
               </Button>
