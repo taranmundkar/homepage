@@ -8,6 +8,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 
+// Add type declaration for Fillout
+declare global {
+  interface Window {
+    Fillout?: {
+      initializeAll: () => void
+    }
+  }
+}
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -15,24 +24,29 @@ const fadeInUp = {
 }
 
 export default function FreeResource() {
-  const [isFormLoaded, setIsFormLoaded] = React.useState(false);
+  const [isFormLoaded, setIsFormLoaded] = React.useState(false)
 
   React.useEffect(() => {
-    const timer = setTimeout(() => setIsFormLoaded(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+    const timer = setTimeout(() => setIsFormLoaded(true), 1000)
+    return () => clearTimeout(timer)
+  }, [])
+
+  const handleScriptLoad = () => {
+    try {
+      if (typeof window !== 'undefined' && window.Fillout) {
+        window.Fillout.initializeAll()
+      }
+    } catch (error) {
+      console.error('Error initializing Fillout form:', error)
+    }
+  }
 
   return (
     <>
       <Script 
         src="https://server.fillout.com/embed/v1/" 
         strategy="afterInteractive"
-        onLoad={() => {
-          // Reinitialize the form after the script has loaded
-          if (window.Fillout) {
-            window.Fillout.initializeAll();
-          }
-        }}
+        onLoad={handleScriptLoad}
       />
       
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
@@ -128,7 +142,7 @@ export default function FreeResource() {
                     data-fillout-dynamic-resize
                   ></div>
                 ) : (
-                  <div className="h-500 flex items-center justify-center">
+                  <div className="h-[500px] flex items-center justify-center">
                     <p>Loading form...</p>
                   </div>
                 )}
