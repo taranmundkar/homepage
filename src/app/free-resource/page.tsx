@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { CheckCircle } from 'lucide-react'
 import { Button } from "@/components/ui/button"
@@ -23,28 +23,26 @@ const fadeInUp = {
 }
 
 export default function FreeResource() {
-  const [isFormLoaded, setIsFormLoaded] = React.useState(false)
+  const [isFormLoaded, setIsFormLoaded] = useState(false)
 
-  React.useEffect(() => {
-    if (typeof window !== 'undefined' && window.Fillout) {
-      window.Fillout.initializeAll()
-      setIsFormLoaded(true)
+  useEffect(() => {
+    const loadForm = () => {
+      if (typeof window !== 'undefined' && window.Fillout) {
+        window.Fillout.initializeAll()
+        setIsFormLoaded(true)
+      } else {
+        setTimeout(loadForm, 500) // Retry after 500ms if Fillout is not available
+      }
     }
+
+    loadForm()
   }, [])
-
-  const handleScriptLoad = () => {
-    if (typeof window !== 'undefined' && window.Fillout) {
-      window.Fillout.initializeAll()
-      setIsFormLoaded(true)
-    }
-  }
 
   return (
     <>
       <Script 
         src="https://server.fillout.com/embed/v1/" 
         strategy="afterInteractive"
-        onLoad={handleScriptLoad}
       />
       
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
@@ -130,7 +128,7 @@ export default function FreeResource() {
               <h2 className="text-2xl md:text-3xl font-bold text-center text-blue-600 mb-8">
                 Get Instant Access to This Exclusive Guide Now For FREE
               </h2>
-              <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
                 {isFormLoaded ? (
                   <div 
                     style={{width:'100%',height:'500px'}} 
@@ -141,7 +139,7 @@ export default function FreeResource() {
                   ></div>
                 ) : (
                   <div className="h-[500px] flex items-center justify-center">
-                    <p>Loading form...</p>
+                    <p className="text-gray-600">Loading form...</p>
                   </div>
                 )}
               </div>
