@@ -24,7 +24,16 @@ export default function FreeResource() {
 
   return (
     <>
-      <Script src="https://server.fillout.com/embed/v1/" strategy="afterInteractive" />
+      <Script 
+        src="https://server.fillout.com/embed/v1/" 
+        strategy="afterInteractive"
+        onLoad={() => {
+          // Reinitialize the form after the script has loaded
+          if (window.Fillout) {
+            window.Fillout.initializeAll();
+          }
+        }}
+      />
       
       <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
         <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
