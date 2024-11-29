@@ -75,7 +75,7 @@ export default function FreeResource() {
               {...fadeInUp}
             >
               <h2 className="text-xl md:text-2xl text-gray-600 mb-4 italic font-light">
-                Struggling to Attract Qualified Leads? Here's Your Lead Generation Cheat Sheet
+                Struggling to Attract Qualified Leads? Here&apos;s Your Lead Generation Cheat Sheet
               </h2>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 mb-8 leading-tight">
                 Revealing 5 Trending Facebook Ad Templates Top Real Estate Agents Are Using Right Now To Steal Leads From Competition
@@ -89,15 +89,15 @@ export default function FreeResource() {
                 transition={{ delay: 0.2 }}
               >
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  What You'll Find Inside This Little Report:
+                  What You&apos;ll Find Inside This Little Report:
                 </h2>
                 <ul className="space-y-4">
                   {[
-                    "Discover high-converting ad scripts designed to attract only serious buyers so you don't waste even a single second on unqualified leads",
-                    "Just plug and play these ready-to-use templates; You don't need to be an expert marketer to drive crazy results",
-                    "Whether you're running small or large campaigns, these templates are tailored for real estate agents at every stage",
+                    "Discover high-converting ad scripts designed to attract only serious buyers so you don&apos;t waste even a single second on unqualified leads",
+                    "Just plug and play these ready-to-use templates; You don&apos;t need to be an expert marketer to drive crazy results",
+                    "Whether you&apos;re running small or large campaigns, these templates are tailored for real estate agents at every stage",
                     "Each ad is crafted with irresistible offers that leave your leads with no option but to contact you",
-                    "In this step-by-step playbook, you'll get everything—pre-written headlines, body copy, and CTAs—all for FREE"
+                    "In this step-by-step playbook, you&apos;ll get everything—pre-written headlines, body copy, and CTAs—all for FREE"
                   ].map((item, index) => (
                     <li key={index} className="flex items-start">
                       <CheckCircle className="w-6 h-6 text-green-500 mr-2 flex-shrink-0 mt-1" />
