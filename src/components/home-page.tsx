@@ -82,7 +82,7 @@ export default function HomePage() {
               >
                 <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" legacyBehavior>
                   <Button className="bg-blue-600 text-white hover:bg-blue-700 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
-                    Let's Accelera Your Business Today
+                    Let&apos;s Accelera Your Business Today
                   </Button>
                 </Link>
               </motion.div>
@@ -105,17 +105,17 @@ export default function HomePage() {
                 {
                   icon: <Zap className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "Lead Generation Lightning",
-                  description: "Electrify your pipeline with high-voltage leads that'll make your sales meter go off the charts!"
+                  description: "Electrify your pipeline with high-voltage leads that&apos;ll make your sales meter go off the charts!"
                 },
                 {
                   icon: <MessageCircle className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "24/7 Charm-o-Matic Chatbot",
-                  description: "Your tireless wingman that schmoozes leads while you snooze. It's like having a clone, but better!"
+                  description: "Your tireless wingman that schmoozes leads while you snooze. It&apos;s like having a clone, but better!"
                 },
                 {
                   icon: <Calendar className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "Time-Bending Calendar Filler",
-                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It's not time travel, it&apos;s TTM!"
+                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It&apos;s not time travel, it&apos;s TTM!"
                 }
               ].map((service, index) => (
                 <motion.div 
