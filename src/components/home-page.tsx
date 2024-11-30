@@ -18,9 +18,9 @@ export default function HomePage() {
 
   const steps = [
     'We analyze your market faster than you can say "sold above asking price"',
-    "Our AI minions work 24/7 to flood your pipeline with grade-A leads",
-    "Smart chatbots charm your leads, leaving them begging for a meeting with you",
-    "You swoop in like a real estate superhero, ready to close deals and take names"
+    'Our AI minions work 24/7 to flood your pipeline with grade-A leads',
+    'Smart chatbots charm your leads, leaving them begging for a meeting with you',
+    'You swoop in like a real estate superhero, ready to close deals and take names'
   ]
 
   return (
@@ -115,7 +115,7 @@ export default function HomePage() {
                 {
                   icon: <Calendar className="w-12 h-12 text-blue-600 mb-4" />,
                   title: "Time-Bending Calendar Filler",
-                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It's not time travel, it's TTM!"
+                  description: "Watch in awe as your schedule magically fills with hot, qualified appointments. It's not time travel, it&apos;s TTM!"
                 }
               ].map((service, index) => (
                 <motion.div 
@@ -163,7 +163,7 @@ export default function HomePage() {
                 {...fadeInUp}
               >
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900">Secrets Of Success In Real Estate</h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6">Harry Hooi's Journey From Oil And Gas To Top Calgary Realtor</p>
+                <p className="text-base sm:text-lg text-gray-700 mb-6">Harry Hooi&apos;s Journey From Oil And Gas To Top Calgary Realtor</p>
                 <div className="relative aspect-video rounded-lg overflow-hidden">
                   <iframe
                     className="w-full h-full absolute top-0 left-0"
@@ -217,7 +217,7 @@ export default function HomePage() {
                   ></iframe>
                 </div>
                 <p className="text-center mt-4 text-sm text-gray-700">
-                  Discover How We're Revolutionizing Real Estate With AI
+                  Discover How We&apos;re Revolutionizing Real Estate With AI
                 </p>
               </motion.div>
 
@@ -251,7 +251,7 @@ export default function HomePage() {
         <section id="contact" className="bg-blue-600 text-white py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready To Join The Real Estate Elite?</h2>
-            <p className="text-lg sm:text-xl mb-8">Don't let another lead slip through your fingers! Grab your cape and let's make real estate history!</p>
+            <p className="text-lg sm:text-xl mb-8">Don&apos;t let another lead slip through your fingers! Grab your cape and let&apos;s make real estate history!</p>
             <Link href="https://api.leadconnectorhq.com/widget/booking/jHKbF5pW1m1cQVxMpjPz" legacyBehavior>
               <Button className="bg-white text-blue-600 hover:bg-gray-100 text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-3 w-full sm:w-auto">
                 Book Your Superhero Training Now!
